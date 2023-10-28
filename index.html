@@ -1,0 +1,13 @@
+//编写程序，计算s = 5 + 7 + 9… + 99 + 101 + 103，并输出。
+#include<stdio.h>
+int main()
+{
+	int i = 0, s = 5;
+	while (s<104)
+	{
+		i = i + s;
+		s = s + 2;
+	}
+	printf("%d\n", i);
+    return 0;
+}
