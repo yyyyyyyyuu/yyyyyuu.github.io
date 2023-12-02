@@ -1,0 +1,216 @@
+B 整数翻转
+//hy拿到了一个正整数x，她希望把这个整数的前k位进行翻转。你能帮帮她吗
+//第一行输入一个正整数t(1≤t≤1000)。
+//接下来输入t行，每行包含两个正整数 x 和 k，用空格隔开。
+//1≤x≤109
+//k保证不超过x的位数
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int t;
+	int x;
+	int k;
+	int i=0;
+	int sz[2];
+	int aa=0;
+	int c=0;
+	double q=0;
+	double a=10;
+again:
+	scanf("%d",&t);
+	if(t>1000&&t<1)
+		goto again;
+	for(i=1;i<=t;i++)
+	{
+		do
+		{
+		ye:
+		scanf("%d %d",&x,&k);
+		if(k>x)
+			goto ye;
+		}while(x>=1&&x<=109);
+	}
+	c=k;
+	for(i=0;i<c;i++)
+	{
+		q=(double)x/pow(a,c);
+		sz[i]==(int)q;
+		c--;
+	}
+	for(i=k;i<=k;i--)
+	{
+		printf("%d",sz[i]);
+	}
+	aa=(int)x%10;
+	printf("%d\n",aa);
+	return 0;
+}
+
+
+C 奶牛牧场
+//已知这片牧场可供N1头奶牛吃D1天，也可以供N2头奶牛吃D2天（D1>D2，N1*D1>N2*D2）。
+//请问，这片奶牛牧场每天新生的草量可以供几头奶牛吃1天？
+//单组输入，每组两行。
+//第1行输入两个正整数N1和D1，均不超过100。
+//第2行输入两个正整数N2和D2，均不超过100。
+//已知输入数据满足D1>D2且N1*D1>N2*D2。
+//计算每天新生草量可以供多少头奶牛吃1天，输出奶牛的头数
+#include<stdio.h>
+int main()
+{
+	int n1,n2;
+	int d1,d2;
+	scanf("%d %d\n%d %d",&n1,&d1,&n2,&d2);
+	sum=
+}
+
+
+D gcd
+//
+//
+//
+#include<stdio.h>
+int gcd(int a,int b)
+{
+	int count=0;
+	if(a==b)
+	{
+		count=0;
+		return count;
+	}
+	again:
+	if(a<b)
+	   {
+		   b=b-a;
+		   count++;
+	   }
+	else if(a>b)
+	    {
+		   a=a-b;
+		   count++;
+	    }
+	if(a!=b)
+		goto again;
+	return count;
+}
+int main()
+{
+	int x=0;
+	int a,b;
+	int i=0;
+	int t;
+	int sz[20];
+	scanf("%d",&t);
+	while(i<t)
+	{
+		scanf("%d %d",&a,&b);
+		x=gcd(a,b);
+		sz[i]=x;
+		i++;
+	}
+	for(i=0;i<t;i++)
+	{
+	    printf("%d\n",sz[i]);
+	}
+	return 0;
+}
+
+
+E 孪生花朵
+////有一种植物会开出N片花瓣的花朵，每一片花瓣的长度都为一个[1, 5]之间的数字。
+////如果两朵花具有完全相同顺序和长度的N片花瓣，则称它们为孪生花朵。
+////现在给出两朵花的N片花瓣的长度，请编写一个程序判断它们是不是孪生花朵。
+////注意：花朵的花瓣会构成一个环。例如：假设两朵花都具有5片花瓣，第1朵花5片花瓣的长度为：1 2 3 4 5，第2朵花5片花瓣的长度为：4 5 1 2 3 ，它们是一对孪生花朵。
+
+
+F 存钱
+////第1天他存了1元钱，接下来两天（第2天和第3天）他每天存了2元钱，再接下来三天（第4天、第5天和第6天）他每天存了3元钱，再接下来四天他每天存了4元钱
+////以此类推，请问到第n天时Kimi一共存了多少钱
+#include<stdio.h>
+int main()
+{
+	int n;
+	int sum;
+	again:
+	scanf("%d",&n);
+	if(n>1000&&n<1)
+		goto again;
+	sum=
+	printf("%d",sum);
+	return 0;
+}
+
+
+H 翻转扑克牌
+
+
+I 唯一字符
+//输入一个长度不超过20的字符串，该字符串仅包含大写字母和小写字母。
+//请编写一个程序，统计在字符串中只出现一次的字符的个数（注意：区分字母大小写）；如果在字符串中不存在只出现一次的字符，则输出“not found”
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char n[20];
+	int i=0;
+	again:
+	scanf("%s",&n);
+	if(n[20]>20&&n[20]<1)
+		goto again;
+	for(i=0;i<=strlen(n);i++)
+	{
+		if(n[i])
+	}
+}
+
+
+J 最萌身高差
+//n个（3<=n<=1000）x星人站成一行，每个x星人的身高都是一个正整数（范围：100-300，单位：厘米）。
+//计算相邻两个x星人的身高差（身高差为非负数），其中最大的身高差称为最萌身高差。请编写一个程序输出由n个x星人排成的这一行的最萌身高差
+#include<stdio.h>
+int main()
+{
+	int n;
+	int i=0;
+	int h;
+	int sz[200];
+	int y=0;
+	int c=0;
+	int a=0;
+	again:
+	scanf("%d",&n);
+	if(n>100&&n<3)
+		goto again;
+	for(i=1;i<=n;i++)
+	{
+		scanf("%d",&h);
+		sz[i]=h;
+	}
+	for(i=0;i<n-1;i++)
+	{
+		if(sz[i]>sz[i+1])
+		{
+			y=sz[i]-sz[i+1];
+			if(y>c)
+				c=y;
+		}
+		else
+		{
+			y=sz[i+1]-sz[i];
+			if(y>a)
+				a=y;
+		}
+	}
+	if(c>a)
+	printf("%d",c);
+	if(a>c)
+	printf("%d",a);
+	return 0;
+}
+
+
+K 最大矩形
+
+
+L 回文七进制
